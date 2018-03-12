@@ -13,7 +13,7 @@ namespace File_Locker
 
             if (!File.Exists("Data/FileLocker.db"))
             {
-                using (var conn = new SQLiteConnection("Data Source=Data/FileLocker.db; Version=3;"))
+                using (var conn = new SQLiteConnection("Data Source=Data/FileLocker.db;Version=3;"))
                 {
                     using (var cmd = new SQLiteCommand(conn))
                     {
@@ -42,9 +42,14 @@ namespace File_Locker
             Close();
         }
 
+        private void chkPasswordProtected_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPasswordProtected.Checked) { MessageBox.Show("Coming Soon!"); }
+        }
+
         private void SetEncryptedPasswordInDatabase(string password)
         {
-            using (var conn = new SQLiteConnection("Data Source=Data/FileLocker.db; Version=3;"))
+            using (var conn = new SQLiteConnection("Data Source=Data/FileLocker.db;Version=3;"))
             {
                 using (var cmd = new SQLiteCommand(conn))
                 {

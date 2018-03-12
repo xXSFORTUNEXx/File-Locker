@@ -56,6 +56,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Classes\Crypto.cs" />
+    <Compile Include="Classes\Encryption.cs" />
     <Compile Include="Classes\User.cs" />
     <Compile Include="Forms\EnterPassword.cs">
       <SubType>Form</SubType>

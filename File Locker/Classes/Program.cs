@@ -30,6 +30,7 @@ namespace File_Locker
     {
         public const bool IS_DEBUGGING = true;
         public const bool IS_LOGGING = true;
+        public const bool CLEANUP_FILES = false;
         public const string FILE_LOCK_PASS = "45450A5558";
     }
 

@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using System.IO;
 using System.Data.SQLite;
+using System.ComponentModel;
 
 namespace File_Locker
 {
@@ -9,7 +10,6 @@ namespace File_Locker
     {
         User FL_User = new User();
         bool Error_Flag = false;
-
 
         public EnterPassword()
         {
@@ -32,10 +32,10 @@ namespace File_Locker
 
             if (txtPassword.Text.Length < 8) { MessageBox.Show("Password must be at least 8 characters in length!", "Error"); return; }
 
-            if (txtPassword.Text == FL_User.CRYPTO_DNC) { MessageBox.Show("Access granted!" + " \n" + "Encrypted Password: " + FL_User.CRYPTO_ENC + " \n" + "Decrypted Password: " + FL_User.CRYPTO_DNC); Close(); }
+            if (txtPassword.Text == FL_User.CRYPTO_DNC) { MessageBox.Show("Access granted!", "Successful"); Close(); }
             else { MessageBox.Show("Invalid password! Please make sure your password is correct! \nAttempts Remaining: " + FL_User.Attempts_Remaining); FL_User.Attempts_Remaining -= 1; }
 
-            if (FL_User.Attempts_Remaining < 0) { MessageBox.Show("No attempts remaining! Please try again later!"); Application.Exit(); }
+            if (FL_User.Attempts_Remaining < 0) { MessageBox.Show("No attempts remaining! Please try again later!"); Application.Exit(); }            
         }
 
         private void GetEncryptedPasswordFromDatabase()

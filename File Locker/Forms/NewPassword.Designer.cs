@@ -35,6 +35,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.txtConfirmPassword = new System.Windows.Forms.TextBox();
             this.btnOK = new System.Windows.Forms.Button();
+            this.chkPasswordProtected = new System.Windows.Forms.CheckBox();
             this.SuspendLayout();
             // 
             // label1
@@ -42,7 +43,7 @@
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(13, 13);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(225, 117);
+            this.label1.Size = new System.Drawing.Size(227, 78);
             this.label1.TabIndex = 0;
             this.label1.Text = resources.GetString("label1.Text");
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -61,7 +62,7 @@
             this.txtPassword.Location = new System.Drawing.Point(19, 161);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.PasswordChar = '*';
-            this.txtPassword.Size = new System.Drawing.Size(219, 20);
+            this.txtPassword.Size = new System.Drawing.Size(232, 20);
             this.txtPassword.TabIndex = 2;
             // 
             // label3
@@ -78,12 +79,12 @@
             this.txtConfirmPassword.Location = new System.Drawing.Point(19, 204);
             this.txtConfirmPassword.Name = "txtConfirmPassword";
             this.txtConfirmPassword.PasswordChar = '*';
-            this.txtConfirmPassword.Size = new System.Drawing.Size(219, 20);
+            this.txtConfirmPassword.Size = new System.Drawing.Size(232, 20);
             this.txtConfirmPassword.TabIndex = 4;
             // 
             // btnOK
             // 
-            this.btnOK.Location = new System.Drawing.Point(162, 231);
+            this.btnOK.Location = new System.Drawing.Point(176, 230);
             this.btnOK.Name = "btnOK";
             this.btnOK.Size = new System.Drawing.Size(75, 23);
             this.btnOK.TabIndex = 5;
@@ -91,11 +92,24 @@
             this.btnOK.UseVisualStyleBackColor = true;
             this.btnOK.Click += new System.EventHandler(this.btnOK_Click);
             // 
+            // chkPasswordProtected
+            // 
+            this.chkPasswordProtected.AutoSize = true;
+            this.chkPasswordProtected.Location = new System.Drawing.Point(16, 116);
+            this.chkPasswordProtected.Name = "chkPasswordProtected";
+            this.chkPasswordProtected.Size = new System.Drawing.Size(176, 17);
+            this.chkPasswordProtected.TabIndex = 6;
+            this.chkPasswordProtected.Text = "Database Password Protected?";
+            this.chkPasswordProtected.UseVisualStyleBackColor = true;
+            this.chkPasswordProtected.CheckedChanged += new System.EventHandler(this.chkPasswordProtected_CheckedChanged);
+            // 
             // NewPassword
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(258, 273);
+            this.ClientSize = new System.Drawing.Size(264, 273);
+            this.ControlBox = false;
+            this.Controls.Add(this.chkPasswordProtected);
             this.Controls.Add(this.btnOK);
             this.Controls.Add(this.txtConfirmPassword);
             this.Controls.Add(this.label3);
@@ -119,5 +133,6 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox txtConfirmPassword;
         private System.Windows.Forms.Button btnOK;
+        private System.Windows.Forms.CheckBox chkPasswordProtected;
     }
 }
