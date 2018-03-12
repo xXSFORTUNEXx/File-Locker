@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27130.2026
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File Locker", "File Locker\File Locker.csproj", "{17D2F949-9FC3-48ED-8AC5-383AFD04E7C4}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FileLocker", "File Locker\FileLocker.csproj", "{17D2F949-9FC3-48ED-8AC5-383AFD04E7C4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
