@@ -21,8 +21,7 @@ namespace File_Locker
         string Current_File;
 
         BackgroundWorker background_Worker = new BackgroundWorker();
-
-        DirectorySecurity Directory_Security = new DirectorySecurity();
+        BackgroundWorker background_Worker_V = new BackgroundWorker();
 
         public FileLocker()
         {
@@ -138,7 +137,11 @@ namespace File_Locker
                         if (crypt != "Error")
                         {
                             Encryption.DecryptFile(file, ffileName, crypt);
-                            AppendLog("Decrypted File - " + Decrypt_Path + "/" + ffileName, "Log");
+                            Current_File = file;
+                            ttlProgressStatus.Text = "Decrypting - " + Current_File;
+                            if (current_progress <= 90) { current_progress += 1; }
+                            background_Worker.ReportProgress(current_progress);
+                            Thread.Sleep(100);
                         }
                     }
                 }
@@ -369,6 +372,12 @@ namespace File_Locker
         private void exitToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void changePasswordToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ChangePassword changePass = new ChangePassword();
+            changePass.ShowDialog();
         }
     }
 }

@@ -136,6 +136,7 @@
             this.changePasswordToolStripMenuItem.Name = "changePasswordToolStripMenuItem";
             this.changePasswordToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.changePasswordToolStripMenuItem.Text = "Change Password";
+            this.changePasswordToolStripMenuItem.Click += new System.EventHandler(this.changePasswordToolStripMenuItem_Click);
             // 
             // exitToolStripMenuItem
             // 

@@ -58,6 +58,12 @@
     <Compile Include="Classes\Crypto.cs" />
     <Compile Include="Classes\Encryption.cs" />
     <Compile Include="Classes\User.cs" />
+    <Compile Include="Forms\ChangePassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\ChangePassword.Designer.cs">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\EnterPassword.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -79,6 +85,9 @@
     </Compile>
     <Compile Include="Classes\Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Forms\ChangePassword.resx">
+      <DependentUpon>ChangePassword.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Forms\EnterPassword.resx">
       <DependentUpon>EnterPassword.cs</DependentUpon>
     </EmbeddedResource>
